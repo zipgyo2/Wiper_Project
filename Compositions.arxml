@@ -13,7 +13,6 @@
             </SW-COMPONENT-PROTOTYPE>
             <SW-COMPONENT-PROTOTYPE UUID="21e708a2-3727-4dac-bc20-aa7e36d3cf18">
               <SHORT-NAME>CPT_Wiper_Mode</SHORT-NAME>
-              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Applications/Wiper_Mode</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
             <SW-COMPONENT-PROTOTYPE UUID="d477039f-0519-4e25-91c8-818b4acdee96">
               <SHORT-NAME>CPT_Wiper_Controller</SHORT-NAME>
@@ -89,18 +88,16 @@
               </PROVIDER-IREF>
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Compositions/Comp/CPT_Wiper_Mode</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Mode/Rport_SwitchSensor_to_WiperMode</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
             <ASSEMBLY-SW-CONNECTOR>
               <SHORT-NAME>ASC_CPT_Wiper_Mode_Pport_WiperMode_to_WiperController_CPT_Wiper_Controller_Rport_WiperMode_to_WiperController</SHORT-NAME>
               <PROVIDER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Compositions/Comp/CPT_Wiper_Mode</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Mode/Pport_WiperMode_to_WiperController</TARGET-P-PORT-REF>
               </PROVIDER-IREF>
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Compositions/Comp/CPT_Wiper_Controller</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_WiperMode_to_WiperController</TARGET-R-PORT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_SitchSensor_to_WiperController</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
             <ASSEMBLY-SW-CONNECTOR>

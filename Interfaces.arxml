@@ -78,7 +78,7 @@
           </DATA-ELEMENTS>
         </SENDER-RECEIVER-INTERFACE>
         <SENDER-RECEIVER-INTERFACE>
-          <SHORT-NAME>SR_ModeSensor_to_App</SHORT-NAME>
+          <SHORT-NAME>SR_SwitchSensor_to_WiperController</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE>
@@ -86,10 +86,6 @@
               <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
             </VARIABLE-DATA-PROTOTYPE>
           </DATA-ELEMENTS>
-        </SENDER-RECEIVER-INTERFACE>
-        <SENDER-RECEIVER-INTERFACE>
-          <SHORT-NAME>SR_ModeController_to_WiperController</SHORT-NAME>
-          <IS-SERVICE>false</IS-SERVICE>
         </SENDER-RECEIVER-INTERFACE>
       </ELEMENTS>
     </AR-PACKAGE>
