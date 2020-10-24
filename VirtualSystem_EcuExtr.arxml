@@ -2,17 +2,17 @@
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
   <AR-PACKAGES>
     <AR-PACKAGE>
-      <SHORT-NAME>System_0_EcuExtract</SHORT-NAME>
+      <SHORT-NAME>VirtualSystem_EcuExtract</SHORT-NAME>
       <ELEMENTS>
         <SYSTEM>
           <SHORT-NAME>EXTR_EcuInstance_0</SHORT-NAME>
           <CATEGORY>ECU_EXTRACT</CATEGORY>
           <FIBEX-ELEMENTS>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
-              <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/ARPackage_0/EcuInstance_0</FIBEX-ELEMENT-REF>
+              <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/VirtualSystem/EcuInstance_0</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
-              <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/ARPackage_0/EcuInstance_0</FIBEX-ELEMENT-REF>
+              <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/VirtualSystem/EcuInstance_0</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
           </FIBEX-ELEMENTS>
           <MAPPINGS>
@@ -23,31 +23,39 @@
                   <SHORT-NAME>SwcToEcuMapping_0</SHORT-NAME>
                   <COMPONENT-IREFS>
                     <COMPONENT-IREF>
-                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_0_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
                       <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
-                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_0_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Mode_Controller</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
                       <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Rain_Sensor</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
-                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_0_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
                       <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Switch_Sensor</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
-                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_0_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Washer_Actuator</TARGET-COMPONENT-REF>
+                    </COMPONENT-IREF>
+                    <COMPONENT-IREF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
                       <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
-                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_0_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
                       <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
-                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_0_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_0</TARGET-COMPONENT-REF>
+                      <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VirtualSystem_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_Rear</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                   </COMPONENT-IREFS>
-                  <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/ARPackage_0/EcuInstance_0</ECU-INSTANCE-REF>
+                  <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/VirtualSystem/EcuInstance_0</ECU-INSTANCE-REF>
                 </SWC-TO-ECU-MAPPING>
               </SW-MAPPINGS>
             </SYSTEM-MAPPING>

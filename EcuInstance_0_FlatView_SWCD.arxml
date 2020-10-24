@@ -15,12 +15,20 @@
                   <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/ECU_Abstractions/ECU_ABS</TYPE-TREF>
                 </SW-COMPONENT-PROTOTYPE>
                 <SW-COMPONENT-PROTOTYPE>
+                  <SHORT-NAME>CPT_Mode_Controller</SHORT-NAME>
+                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Applications/Mode_Controller</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE>
                   <SHORT-NAME>CPT_Rain_Sensor</SHORT-NAME>
                   <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/Sensors_and_Actuators/Rain_Sensor</TYPE-TREF>
                 </SW-COMPONENT-PROTOTYPE>
                 <SW-COMPONENT-PROTOTYPE>
                   <SHORT-NAME>CPT_Switch_Sensor</SHORT-NAME>
                   <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/Sensors_and_Actuators/Switch_Sensor</TYPE-TREF>
+                </SW-COMPONENT-PROTOTYPE>
+                <SW-COMPONENT-PROTOTYPE>
+                  <SHORT-NAME>CPT_Washer_Actuator</SHORT-NAME>
+                  <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/Sensors_and_Actuators/Washer_Actuator</TYPE-TREF>
                 </SW-COMPONENT-PROTOTYPE>
                 <SW-COMPONENT-PROTOTYPE>
                   <SHORT-NAME>CPT_Wiper_Controller</SHORT-NAME>
@@ -31,31 +39,31 @@
                   <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/Sensors_and_Actuators/Wiper_Motor</TYPE-TREF>
                 </SW-COMPONENT-PROTOTYPE>
                 <SW-COMPONENT-PROTOTYPE>
-                  <SHORT-NAME>CPT_Wiper_Motor_0</SHORT-NAME>
+                  <SHORT-NAME>CPT_Wiper_Motor_Rear</SHORT-NAME>
                   <TYPE-TREF DEST="SENSOR-ACTUATOR-SW-COMPONENT-TYPE">/Sensors_and_Actuators/Wiper_Motor</TYPE-TREF>
                 </SW-COMPONENT-PROTOTYPE>
               </COMPONENTS>
               <CONNECTORS>
                 <ASSEMBLY-SW-CONNECTOR>
-                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_RainSensor_CPT_Rain_Sensor_Rport_ECU_to_RainSensor</SHORT-NAME>
+                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_RainSensor_CPT_Switch_Sensor_Rport_ECU_to_SwitchSensor</SHORT-NAME>
                   <PROVIDER-IREF>
                     <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</CONTEXT-COMPONENT-REF>
                     <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_RainSensor</TARGET-P-PORT-REF>
                   </PROVIDER-IREF>
                   <REQUESTER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Rain_Sensor</CONTEXT-COMPONENT-REF>
-                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Rain_Sensor/Rport_ECU_to_RainSensor</TARGET-R-PORT-REF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Switch_Sensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Switch_Sensor/Rport_ECU_to_SwitchSensor</TARGET-R-PORT-REF>
                   </REQUESTER-IREF>
                 </ASSEMBLY-SW-CONNECTOR>
                 <ASSEMBLY-SW-CONNECTOR>
-                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_SwitchSensor_CPT_Switch_Sensor_Rport_ECU_to_SwitchSensor</SHORT-NAME>
+                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_SwitchSensor_CPT_Rain_Sensor_Rport_ECU_to_RainSensor</SHORT-NAME>
                   <PROVIDER-IREF>
                     <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</CONTEXT-COMPONENT-REF>
                     <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_SwitchSensor</TARGET-P-PORT-REF>
                   </PROVIDER-IREF>
                   <REQUESTER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Switch_Sensor</CONTEXT-COMPONENT-REF>
-                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Switch_Sensor/Rport_ECU_to_SwitchSensor</TARGET-R-PORT-REF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Rain_Sensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Rain_Sensor/Rport_ECU_to_RainSensor</TARGET-R-PORT-REF>
                   </REQUESTER-IREF>
                 </ASSEMBLY-SW-CONNECTOR>
                 <ASSEMBLY-SW-CONNECTOR>
@@ -70,36 +78,25 @@
                   </REQUESTER-IREF>
                 </ASSEMBLY-SW-CONNECTOR>
                 <ASSEMBLY-SW-CONNECTOR>
-                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_WiperMotor_CPT_Wiper_Motor_0_Rport_ECU_to_WiperMotor</SHORT-NAME>
-                  <PROVIDER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</CONTEXT-COMPONENT-REF>
-                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_WiperMotor</TARGET-P-PORT-REF>
-                  </PROVIDER-IREF>
-                  <REQUESTER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_0</CONTEXT-COMPONENT-REF>
-                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Motor/Rport_ECU_to_WiperMotor</TARGET-R-PORT-REF>
-                  </REQUESTER-IREF>
-                </ASSEMBLY-SW-CONNECTOR>
-                <ASSEMBLY-SW-CONNECTOR>
-                  <SHORT-NAME>ASC_CPT_Rain_Sensor_Pport_RainSensor_to_WiperController_CPT_Wiper_Controller_Rport_RainSensor_to_WiperController</SHORT-NAME>
-                  <PROVIDER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Rain_Sensor</CONTEXT-COMPONENT-REF>
-                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Sensors_and_Actuators/Rain_Sensor/Pport_RainSensor_to_WiperController</TARGET-P-PORT-REF>
-                  </PROVIDER-IREF>
-                  <REQUESTER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</CONTEXT-COMPONENT-REF>
-                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_RainSensor_to_WiperController</TARGET-R-PORT-REF>
-                  </REQUESTER-IREF>
-                </ASSEMBLY-SW-CONNECTOR>
-                <ASSEMBLY-SW-CONNECTOR>
-                  <SHORT-NAME>ASC_CPT_Switch_Sensor_Pport_SwitchSensor_to_WiperMode_CPT_Wiper_Controller_Rport_SitchSensor_to_WiperController</SHORT-NAME>
+                  <SHORT-NAME>ASC_CPT_Switch_Sensor_Pport_SwitchSensor_to_WiperMode_CPT_Mode_Controller_RPort_SwitchSensor_to_ModeController</SHORT-NAME>
                   <PROVIDER-IREF>
                     <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Switch_Sensor</CONTEXT-COMPONENT-REF>
                     <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Sensors_and_Actuators/Switch_Sensor/Pport_SwitchSensor_to_WiperMode</TARGET-P-PORT-REF>
                   </PROVIDER-IREF>
                   <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Mode_Controller</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Mode_Controller/RPort_SwitchSensor_to_ModeController</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR>
+                  <SHORT-NAME>ASC_CPT_Mode_Controller_PPort_ModeContorller_to_WiperContorller_CPT_Wiper_Controller_Rport_ModeContorller_to_WiperContro</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Mode_Controller</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Mode_Controller/PPort_ModeContorller_to_WiperContorller</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
                     <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</CONTEXT-COMPONENT-REF>
-                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_SitchSensor_to_WiperController</TARGET-R-PORT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</TARGET-R-PORT-REF>
                   </REQUESTER-IREF>
                 </ASSEMBLY-SW-CONNECTOR>
                 <ASSEMBLY-SW-CONNECTOR>
@@ -114,14 +111,58 @@
                   </REQUESTER-IREF>
                 </ASSEMBLY-SW-CONNECTOR>
                 <ASSEMBLY-SW-CONNECTOR>
-                  <SHORT-NAME>ASC_CPT_Wiper_Controller_Pport_WiperController_to_WiperMotor_CPT_Wiper_Motor_0_Rport_WiperController_to_WiperMotor</SHORT-NAME>
+                  <SHORT-NAME>ASC_CPT_Rain_Sensor_Pport_RainSensor_to_WiperController_CPT_Wiper_Controller_Rport_RainSensor_to_WiperController</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Rain_Sensor</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Sensors_and_Actuators/Rain_Sensor/Pport_RainSensor_to_WiperController</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_RainSensor_to_WiperController</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR>
+                  <SHORT-NAME>ASC_CPT_Wiper_Controller_Pport_WiperController_to_WiperMotor_CPT_Wiper_Motor_Rear_Rport_WiperController_to_WiperMotor</SHORT-NAME>
                   <PROVIDER-IREF>
                     <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</CONTEXT-COMPONENT-REF>
                     <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/Pport_WiperController_to_WiperMotor</TARGET-P-PORT-REF>
                   </PROVIDER-IREF>
                   <REQUESTER-IREF>
-                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_0</CONTEXT-COMPONENT-REF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_Rear</CONTEXT-COMPONENT-REF>
                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Motor/Rport_WiperController_to_WiperMotor</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR>
+                  <SHORT-NAME>ASC_CPT_Wiper_Controller_PPort_TriggerWasher_CPT_Washer_Actuator_RPort_TriggerWasher</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/PPort_TriggerWasher</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Washer_Actuator</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Washer_Actuator/RPort_TriggerWasher</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR>
+                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_Washer_CPT_Washer_Actuator_RPort_ECU_to_Washer</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_Washer</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Washer_Actuator</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Washer_Actuator/RPort_ECU_to_Washer</TARGET-R-PORT-REF>
+                  </REQUESTER-IREF>
+                </ASSEMBLY-SW-CONNECTOR>
+                <ASSEMBLY-SW-CONNECTOR>
+                  <SHORT-NAME>ASC_CPT_ECU_ABS_Pport_ECU_to_WiperMotor_CPT_Wiper_Motor_Rear_Rport_ECU_to_WiperMotor</SHORT-NAME>
+                  <PROVIDER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</CONTEXT-COMPONENT-REF>
+                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_WiperMotor</TARGET-P-PORT-REF>
+                  </PROVIDER-IREF>
+                  <REQUESTER-IREF>
+                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_Rear</CONTEXT-COMPONENT-REF>
+                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Motor/Rport_ECU_to_WiperMotor</TARGET-R-PORT-REF>
                   </REQUESTER-IREF>
                 </ASSEMBLY-SW-CONNECTOR>
               </CONNECTORS>
