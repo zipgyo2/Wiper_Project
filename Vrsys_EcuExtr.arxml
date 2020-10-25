@@ -24,35 +24,35 @@
                   <COMPONENT-IREFS>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_ECU_ABS</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_ECU_ABS</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Mode_Controller</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Mode_Controller</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Rain_Sensor</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Rain_Sensor</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Switch_Sensor</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Switch_Sensor</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Washer_Actuator</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Washer_Actuator</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Controller</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Wiper_Controller</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Wiper_Motor</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                     <COMPONENT-IREF>
                       <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Vrsys_EcuExtract/EXTR_EcuInstance_0/CPT_EcuInstance_0_FlatView</CONTEXT-COMPOSITION-REF>
-                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView/CPT_Wiper_Motor_Rear</TARGET-COMPONENT-REF>
+                      <TARGET-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView/CPT_Wiper_Motor_Rear</TARGET-COMPONENT-REF>
                     </COMPONENT-IREF>
                   </COMPONENT-IREFS>
                   <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/System/EcuInstance_0</ECU-INSTANCE-REF>
@@ -64,7 +64,7 @@
             <ROOT-SW-COMPOSITION-PROTOTYPE>
               <SHORT-NAME>CPT_EcuInstance_0_FlatView</SHORT-NAME>
               <FLAT-MAP-REF DEST="FLAT-MAP">/EcuInstance_0_FlatView/EcuInstance_0_FlatMap</FLAT-MAP-REF>
-              <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_0_FlatView</SOFTWARE-COMPOSITION-TREF>
+              <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/EcuInstance_0_FlatView/SwComponentTypes/EcuInstance_TopLevelComposition_FlatView</SOFTWARE-COMPOSITION-TREF>
             </ROOT-SW-COMPOSITION-PROTOTYPE>
           </ROOT-SOFTWARE-COMPOSITIONS>
         </SYSTEM>

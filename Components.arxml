@@ -23,12 +23,12 @@
               <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_RainSensor</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
-              <SHORT-NAME>Pport_ECU_to_WiperMotor</SHORT-NAME>
-              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_Wiper</PROVIDED-INTERFACE-TREF>
+              <SHORT-NAME>Pport_ECU_to_WiperActuator</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_WiperActuator</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE UUID="5fcee61d-d6c5-4b14-ae75-c9e9f7a7832a">
-              <SHORT-NAME>Pport_ECU_to_Washer</SHORT-NAME>
-              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_Washer</PROVIDED-INTERFACE-TREF>
+              <SHORT-NAME>Pport_ECU_to_WasherActuator</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_WasherActuator</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
@@ -44,11 +44,11 @@
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
                 <OPERATION-INVOKED-EVENT UUID="5365f07b-eccc-4391-8672-763c6901e1e3">
-                  <SHORT-NAME>OIE_ECU_to_Wipermotor</SHORT-NAME>
-                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ECU_Abstractions/ECU_ABS/IB_ECU_ABS/RE_ECU_to_WiperMotor</START-ON-EVENT-REF>
+                  <SHORT-NAME>OIE_ECU_to_WiperActuator</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ECU_Abstractions/ECU_ABS/IB_ECU_ABS/RE_ECU_to_WiperActuator</START-ON-EVENT-REF>
                   <OPERATION-IREF>
-                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_WiperMotor</CONTEXT-P-PORT-REF>
-                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_Wiper/CS_Oper_ECU_to_WiperMotor</TARGET-PROVIDED-OPERATION-REF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_WiperActuator</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_WiperActuator/CS_Oper_ECU_to_WiperActuator</TARGET-PROVIDED-OPERATION-REF>
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
                 <OPERATION-INVOKED-EVENT UUID="dda385de-cf1c-41d7-8380-c7cc927e66e2">
@@ -60,11 +60,11 @@
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
                 <OPERATION-INVOKED-EVENT UUID="f3388c90-679f-4ca2-98cf-fd0e1d8a71fd">
-                  <SHORT-NAME>OIE_ECU_to_Washer</SHORT-NAME>
-                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ECU_Abstractions/ECU_ABS/IB_ECU_ABS/RE_ECU_to_Washer</START-ON-EVENT-REF>
+                  <SHORT-NAME>OIE_ECU_to_WasherActuator</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ECU_Abstractions/ECU_ABS/IB_ECU_ABS/RE_ECU_to_WasherActuator</START-ON-EVENT-REF>
                   <OPERATION-IREF>
-                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_Washer</CONTEXT-P-PORT-REF>
-                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_Washer/CS_Oper_ECU_to_Washer</TARGET-PROVIDED-OPERATION-REF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ECU_Abstractions/ECU_ABS/Pport_ECU_to_WasherActuator</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_WasherActuator/CS_Oper_ECU_to_WasherActuator</TARGET-PROVIDED-OPERATION-REF>
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
               </EVENTS>
@@ -74,7 +74,7 @@
                   <SYMBOL>RE_ECU_to_RainSensor</SYMBOL>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="651924e1-516e-4845-b80e-74c6d21da12f">
-                  <SHORT-NAME>RE_ECU_to_WiperMotor</SHORT-NAME>
+                  <SHORT-NAME>RE_ECU_to_WiperActuator</SHORT-NAME>
                   <SYMBOL>RE_ECU_to_WiperMotor</SYMBOL>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="54bb3e22-b320-4197-a229-1a9448587869">
@@ -82,7 +82,7 @@
                   <SYMBOL>RE_ECU_to_SwitchSensor</SYMBOL>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="741704b4-e953-413c-99f8-979af5a16073">
-                  <SHORT-NAME>RE_ECU_to_Washer</SHORT-NAME>
+                  <SHORT-NAME>RE_ECU_to_WasherActuator</SHORT-NAME>
                   <SYMBOL>RE_ECU_to_Washer</SYMBOL>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
@@ -107,19 +107,19 @@
           <PORTS>
             <R-PORT-PROTOTYPE>
               <SHORT-NAME>Rport_RainSensor_to_WiperController</SHORT-NAME>
-              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_Sensor_to_WiperController</REQUIRED-INTERFACE-TREF>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_RainSensor_to_WiperController</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
-              <SHORT-NAME>Pport_WiperController_to_WiperMotor</SHORT-NAME>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_App_to_Wiper</PROVIDED-INTERFACE-TREF>
+              <SHORT-NAME>Pport_WiperController_to_WiperActuator</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE>
               <SHORT-NAME>Rport_ModeContorller_to_WiperController</SHORT-NAME>
               <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE UUID="833fc3f8-33fc-4855-89b7-3ec8f3f30abe">
-              <SHORT-NAME>PPort_TriggerWasher</SHORT-NAME>
-              <PROVIDED-INTERFACE-TREF DEST="TRIGGER-INTERFACE">/TriggerInterfaces/TR_Washer</PROVIDED-INTERFACE-TREF>
+              <SHORT-NAME>Pport_WiperController_to_WasherActuator</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="TRIGGER-INTERFACE">/TriggerInterfaces/TR_WiperController_WasherActuator</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
@@ -134,17 +134,17 @@
                   <DISABLED-MODE-IREFS>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv1</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv2</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv3</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                   </DISABLED-MODE-IREFS>
@@ -153,7 +153,7 @@
                   <MODE-IREFS>
                     <MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Auto</TARGET-MODE-DECLARATION-REF>
                     </MODE-IREF>
                   </MODE-IREFS>
@@ -163,17 +163,17 @@
                   <DISABLED-MODE-IREFS>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Auto</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv2</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv3</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                   </DISABLED-MODE-IREFS>
@@ -182,7 +182,7 @@
                   <MODE-IREFS>
                     <MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv1</TARGET-MODE-DECLARATION-REF>
                     </MODE-IREF>
                   </MODE-IREFS>
@@ -192,17 +192,17 @@
                   <DISABLED-MODE-IREFS>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Auto</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv1</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv3</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                   </DISABLED-MODE-IREFS>
@@ -211,7 +211,7 @@
                   <MODE-IREFS>
                     <MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv2</TARGET-MODE-DECLARATION-REF>
                     </MODE-IREF>
                   </MODE-IREFS>
@@ -221,17 +221,17 @@
                   <DISABLED-MODE-IREFS>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Auto</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv1</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                     <DISABLED-MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv2</TARGET-MODE-DECLARATION-REF>
                     </DISABLED-MODE-IREF>
                   </DISABLED-MODE-IREFS>
@@ -240,7 +240,7 @@
                   <MODE-IREFS>
                     <MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Wiper_Lv3</TARGET-MODE-DECLARATION-REF>
                     </MODE-IREF>
                   </MODE-IREFS>
@@ -252,39 +252,38 @@
                   <MODE-IREFS>
                     <MODE-IREF>
                       <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_ModeContorller_to_WiperController</CONTEXT-PORT-REF>
-                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                      <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
                       <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup/Washer</TARGET-MODE-DECLARATION-REF>
                     </MODE-IREF>
                   </MODE-IREFS>
                 </SWC-MODE-SWITCH-EVENT>
               </EVENTS>
-              <EXPLICIT-INTER-RUNNABLE-VARIABLES>
-                <VARIABLE-DATA-PROTOTYPE UUID="32e8f8be-81d6-4f67-b9ff-f425af1db669">
-                  <SHORT-NAME>Shared_Wiper_Speed</SHORT-NAME>
-                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
-                </VARIABLE-DATA-PROTOTYPE>
-              </EXPLICIT-INTER-RUNNABLE-VARIABLES>
               <IMPLICIT-INTER-RUNNABLE-VARIABLES>
                 <VARIABLE-DATA-PROTOTYPE UUID="587a1cea-9f5a-4b79-b697-7d6d4de350ec">
-                  <SHORT-NAME>Shared_Wiper_Speeds</SHORT-NAME>
-                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+                  <SHORT-NAME>IRV_Wiper_Speed</SHORT-NAME>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
               </IMPLICIT-INTER-RUNNABLE-VARIABLES>
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="ff4d331f-75c1-47c8-b6b9-80d53bef4bff">
                   <SHORT-NAME>RE_Mode_Auto</SHORT-NAME>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="0b4c1ff5-16d4-45f3-809f-96dc2900a395">
+                      <SHORT-NAME>DRPA_rain_sensor_value_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Applications/Wiper_Controller/Rport_RainSensor_to_WiperController</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_RainSensor_to_WiperController/rain_sensor_value</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
                   <SYMBOL>RE_Mode_Auto</SYMBOL>
                   <WRITTEN-LOCAL-VARIABLES>
                     <VARIABLE-ACCESS>
                       <SHORT-NAME>WrittenLocalVariables_VariableAccess_0</SHORT-NAME>
                       <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speeds</LOCAL-VARIABLE-REF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS>
-                      <SHORT-NAME>WrittenLocalVariables_VariableAccess_1</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speed</LOCAL-VARIABLE-REF>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/IRV_Wiper_Speed</LOCAL-VARIABLE-REF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
                   </WRITTEN-LOCAL-VARIABLES>
@@ -296,13 +295,7 @@
                     <VARIABLE-ACCESS>
                       <SHORT-NAME>WrittenLocalVariables_VariableAccess_0</SHORT-NAME>
                       <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speeds</LOCAL-VARIABLE-REF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS>
-                      <SHORT-NAME>WrittenLocalVariables_VariableAccess_1</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speed</LOCAL-VARIABLE-REF>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/IRV_Wiper_Speed</LOCAL-VARIABLE-REF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
                   </WRITTEN-LOCAL-VARIABLES>
@@ -314,13 +307,7 @@
                     <VARIABLE-ACCESS>
                       <SHORT-NAME>WrittenLocalVariables_VariableAccess_0</SHORT-NAME>
                       <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speeds</LOCAL-VARIABLE-REF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS>
-                      <SHORT-NAME>WrittenLocalVariables_VariableAccess_1</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speed</LOCAL-VARIABLE-REF>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/IRV_Wiper_Speed</LOCAL-VARIABLE-REF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
                   </WRITTEN-LOCAL-VARIABLES>
@@ -332,13 +319,7 @@
                     <VARIABLE-ACCESS>
                       <SHORT-NAME>WrittenLocalVariables_VariableAccess_0</SHORT-NAME>
                       <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speeds</LOCAL-VARIABLE-REF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS>
-                      <SHORT-NAME>WrittenLocalVariables_VariableAccess_1</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/Shared_Wiper_Speed</LOCAL-VARIABLE-REF>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Applications/Wiper_Controller/IB_Wiper_Controller/IRV_Wiper_Speed</LOCAL-VARIABLE-REF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
                   </WRITTEN-LOCAL-VARIABLES>
@@ -349,8 +330,8 @@
                     <EXTERNAL-TRIGGERING-POINT>
                       <TRIGGER-IREF>
                         <P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF>
-                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/PPort_TriggerWasher</CONTEXT-P-PORT-REF>
-                          <TARGET-TRIGGER-REF DEST="TRIGGER">/TriggerInterfaces/TR_Washer/TR_Washer</TARGET-TRIGGER-REF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/Pport_WiperController_to_WasherActuator</CONTEXT-P-PORT-REF>
+                          <TARGET-TRIGGER-REF DEST="TRIGGER">/TriggerInterfaces/TR_WiperController_WasherActuator/washer_value</TARGET-TRIGGER-REF>
                         </P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF>
                       </TRIGGER-IREF>
                     </EXTERNAL-TRIGGERING-POINT>
@@ -401,7 +382,7 @@
                   <SHORT-NAME>RE_SwitchSensor_to_ModeController</SHORT-NAME>
                   <DATA-RECEIVE-POINT-BY-ARGUMENTS>
                     <VARIABLE-ACCESS UUID="0fbc071c-fe02-42ff-ad47-e73ee8e01618">
-                      <SHORT-NAME>DRPA_switch_sensor_value_0</SHORT-NAME>
+                      <SHORT-NAME>DRPA_switch_sensor_value</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
                           <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Applications/Mode_Controller/RPort_SwitchSensor_to_ModeController</PORT-PROTOTYPE-REF>
@@ -416,10 +397,10 @@
                   <SHORT-NAME>RE_ModeContorller_to_WiperContorller</SHORT-NAME>
                   <MODE-SWITCH-POINTS>
                     <MODE-SWITCH-POINT UUID="603f1a51-f5b3-44fb-a6d5-c37aa1c6586c">
-                      <SHORT-NAME>ModeSwitchPoint_0</SHORT-NAME>
+                      <SHORT-NAME>ModeSwitchPoint</SHORT-NAME>
                       <MODE-GROUP-IREF>
                         <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Applications/Mode_Controller/PPort_ModeContorller_to_WiperContorller</CONTEXT-P-PORT-REF>
-                        <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/MDGP</TARGET-MODE-GROUP-REF>
+                        <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ModeSwitchInterfaces/MD_ModeController_to_WiperController/Switch_ModeGroup</TARGET-MODE-GROUP-REF>
                       </MODE-GROUP-IREF>
                     </MODE-SWITCH-POINT>
                   </MODE-SWITCH-POINTS>
@@ -442,7 +423,7 @@
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_SwitchSensor</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
-              <SHORT-NAME>Pport_SwitchSensor_to_WiperMode</SHORT-NAME>
+              <SHORT-NAME>Pport_SwitchSensor_to_ModeController</SHORT-NAME>
               <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_SwitchSensor_ModeController</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
           </PORTS>
@@ -461,10 +442,10 @@
                   <SHORT-NAME>RE_SwitchSensor</SHORT-NAME>
                   <DATA-SEND-POINTS>
                     <VARIABLE-ACCESS UUID="3e9b0faa-0c51-4404-ae6a-6a4e461d645e">
-                      <SHORT-NAME>DSP_switch_sensor_value_0</SHORT-NAME>
+                      <SHORT-NAME>DSP_switch_sensor_value</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
-                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Sensors_and_Actuators/Switch_Sensor/Pport_SwitchSensor_to_WiperMode</PORT-PROTOTYPE-REF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Sensors_and_Actuators/Switch_Sensor/Pport_SwitchSensor_to_ModeController</PORT-PROTOTYPE-REF>
                           <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_SwitchSensor_ModeController/switch_sensor_value</TARGET-DATA-PROTOTYPE-REF>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
@@ -472,7 +453,7 @@
                   </DATA-SEND-POINTS>
                   <SERVER-CALL-POINTS>
                     <SYNCHRONOUS-SERVER-CALL-POINT UUID="ab046df9-94a4-41b5-b076-d695d9feb006">
-                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <SHORT-NAME>SynchronousServerCallPoint</SHORT-NAME>
                       <OPERATION-IREF>
                         <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Switch_Sensor/Rport_ECU_to_SwitchSensor</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_SwitchSensor/CS_Oper_ECU_to_SwitchSensor</TARGET-REQUIRED-OPERATION-REF>
@@ -494,7 +475,7 @@
             </R-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE>
               <SHORT-NAME>Pport_RainSensor_to_WiperController</SHORT-NAME>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_Sensor_to_WiperController</PROVIDED-INTERFACE-TREF>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_RainSensor_to_WiperController</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
@@ -512,7 +493,7 @@
                   <SHORT-NAME>RE_RainSensor</SHORT-NAME>
                   <SERVER-CALL-POINTS>
                     <SYNCHRONOUS-SERVER-CALL-POINT UUID="21bc8096-f5d2-46fa-bb1a-24a713a26c40">
-                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <SHORT-NAME>SynchronousServerCallPoint</SHORT-NAME>
                       <OPERATION-IREF>
                         <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Rain_Sensor/Rport_ECU_to_RainSensor</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_RainSensor/CS_Oper_ECU_to_RainSensor</TARGET-REQUIRED-OPERATION-REF>
@@ -525,11 +506,11 @@
                   <SHORT-NAME>RE_RainSensor_to_WiperController</SHORT-NAME>
                   <DATA-SEND-POINTS>
                     <VARIABLE-ACCESS UUID="9951a7ac-56d3-451d-806d-c3ff5c411376">
-                      <SHORT-NAME>DSP_rain_sensor_value_0</SHORT-NAME>
+                      <SHORT-NAME>DSP_rain_sensor_value</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
                           <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Sensors_and_Actuators/Rain_Sensor/Pport_RainSensor_to_WiperController</PORT-PROTOTYPE-REF>
-                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_Sensor_to_WiperController/rain_sensor_value</TARGET-DATA-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_RainSensor_to_WiperController/rain_sensor_value</TARGET-DATA-PROTOTYPE-REF>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
@@ -541,40 +522,40 @@
           </INTERNAL-BEHAVIORS>
         </SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
         <SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
-          <SHORT-NAME>Wiper_Motor</SHORT-NAME>
+          <SHORT-NAME>Wiper_Actuator</SHORT-NAME>
           <PORTS>
             <R-PORT-PROTOTYPE>
-              <SHORT-NAME>Rport_ECU_to_WiperMotor</SHORT-NAME>
-              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_Wiper</REQUIRED-INTERFACE-TREF>
+              <SHORT-NAME>Rport_ECU_to_WiperActuator</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_WiperActuator</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE>
-              <SHORT-NAME>Rport_WiperController_to_WiperMotor</SHORT-NAME>
-              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_App_to_Wiper</REQUIRED-INTERFACE-TREF>
+              <SHORT-NAME>Rport_WiperController_to_WiperActuator</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="3bea39c0-d724-48fb-b1e3-88dc464b1e2e">
-              <SHORT-NAME>IB_Wiper_Motor</SHORT-NAME>
+              <SHORT-NAME>IB_Wiper_Actuator</SHORT-NAME>
               <EVENTS>
                 <DATA-RECEIVED-EVENT UUID="0254748d-94c0-46cf-b3a6-057112a98f6e">
-                  <SHORT-NAME>DRE_Wiper</SHORT-NAME>
-                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Sensors_and_Actuators/Wiper_Motor/IB_Wiper_Motor/RE_WiperMotor</START-ON-EVENT-REF>
+                  <SHORT-NAME>DRE_WiperActuator</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Sensors_and_Actuators/Wiper_Actuator/IB_Wiper_Actuator/RE_WiperActuator</START-ON-EVENT-REF>
                   <DATA-IREF>
-                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Motor/Rport_WiperController_to_WiperMotor</CONTEXT-R-PORT-REF>
-                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_App_to_Wiper/wipermotor_Speed_Value</TARGET-DATA-ELEMENT-REF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Actuator/Rport_WiperController_to_WiperActuator</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator/wiper_speed_value</TARGET-DATA-ELEMENT-REF>
                   </DATA-IREF>
                 </DATA-RECEIVED-EVENT>
               </EVENTS>
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="33133088-d567-453a-984f-f4cb51211031">
-                  <SHORT-NAME>RE_WiperMotor</SHORT-NAME>
+                  <SHORT-NAME>RE_WiperActuator</SHORT-NAME>
                   <DATA-RECEIVE-POINT-BY-ARGUMENTS>
                     <VARIABLE-ACCESS UUID="8c74d0a9-e1dc-40b9-a6d2-869648d64fa3">
-                      <SHORT-NAME>DRPA_wipermotor_Speed_Value_0</SHORT-NAME>
+                      <SHORT-NAME>DRPA_wiper_Speed_Value_0</SHORT-NAME>
                       <ACCESSED-VARIABLE>
                         <AUTOSAR-VARIABLE-IREF>
-                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Motor/Rport_WiperController_to_WiperMotor</PORT-PROTOTYPE-REF>
-                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_App_to_Wiper/wipermotor_Speed_Value</TARGET-DATA-PROTOTYPE-REF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Actuator/Rport_WiperController_to_WiperActuator</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator/wiper_speed_value</TARGET-DATA-PROTOTYPE-REF>
                         </AUTOSAR-VARIABLE-IREF>
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
@@ -583,8 +564,8 @@
                     <SYNCHRONOUS-SERVER-CALL-POINT UUID="43d4ec91-0e39-4d74-9731-c3b81ea1a3a5">
                       <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Motor/Rport_ECU_to_WiperMotor</CONTEXT-R-PORT-REF>
-                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_Wiper/CS_Oper_ECU_to_WiperMotor</TARGET-REQUIRED-OPERATION-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Wiper_Actuator/Rport_ECU_to_WiperActuator</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_WiperActuator/CS_Oper_ECU_to_WiperActuator</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
                   </SERVER-CALL-POINTS>
@@ -606,12 +587,12 @@
           </ADMIN-DATA>
           <PORTS>
             <R-PORT-PROTOTYPE UUID="8bd6aa4b-143c-45de-8e6b-e65859f6df06">
-              <SHORT-NAME>RPort_TriggerWasher</SHORT-NAME>
-              <REQUIRED-INTERFACE-TREF DEST="TRIGGER-INTERFACE">/TriggerInterfaces/TR_Washer</REQUIRED-INTERFACE-TREF>
+              <SHORT-NAME>RPort_WiperController_to_WasherActuator</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="TRIGGER-INTERFACE">/TriggerInterfaces/TR_WiperController_WasherActuator</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
             <R-PORT-PROTOTYPE UUID="ad0aa7c9-954d-4ae5-bb70-4ab4bfe428e7">
-              <SHORT-NAME>RPort_ECU_to_Washer</SHORT-NAME>
-              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_Washer</REQUIRED-INTERFACE-TREF>
+              <SHORT-NAME>RPort_ECU_to_WasherActuator</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/ClientServerInterfaces/CS_ECU_to_WasherActuator</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
@@ -622,8 +603,8 @@
                   <SHORT-NAME>TR_Wahser_Actuator</SHORT-NAME>
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Sensors_and_Actuators/Washer_Actuator/IB_Washer_Actuator/RE_Washer_Actuator</START-ON-EVENT-REF>
                   <TRIGGER-IREF>
-                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Washer_Actuator/RPort_TriggerWasher</CONTEXT-R-PORT-REF>
-                    <TARGET-TRIGGER-REF DEST="TRIGGER">/TriggerInterfaces/TR_Washer/TR_Washer</TARGET-TRIGGER-REF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Washer_Actuator/RPort_WiperController_to_WasherActuator</CONTEXT-R-PORT-REF>
+                    <TARGET-TRIGGER-REF DEST="TRIGGER">/TriggerInterfaces/TR_WiperController_WasherActuator/washer_value</TARGET-TRIGGER-REF>
                   </TRIGGER-IREF>
                 </EXTERNAL-TRIGGER-OCCURRED-EVENT>
               </EVENTS>
@@ -632,10 +613,10 @@
                   <SHORT-NAME>RE_Washer_Actuator</SHORT-NAME>
                   <SERVER-CALL-POINTS>
                     <SYNCHRONOUS-SERVER-CALL-POINT UUID="6026eec5-8656-4bb0-b57f-dc5200d63c80">
-                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <SHORT-NAME>SynchronousServerCallPoint</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Washer_Actuator/RPort_ECU_to_Washer</CONTEXT-R-PORT-REF>
-                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_Washer/CS_Oper_ECU_to_Washer</TARGET-REQUIRED-OPERATION-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Sensors_and_Actuators/Washer_Actuator/RPort_ECU_to_WasherActuator</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/ClientServerInterfaces/CS_ECU_to_WasherActuator/CS_Oper_ECU_to_WasherActuator</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
                   </SERVER-CALL-POINTS>

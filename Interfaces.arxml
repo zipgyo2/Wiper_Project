@@ -21,14 +21,14 @@
           </OPERATIONS>
         </CLIENT-SERVER-INTERFACE>
         <CLIENT-SERVER-INTERFACE>
-          <SHORT-NAME>CS_ECU_to_Wiper</SHORT-NAME>
+          <SHORT-NAME>CS_ECU_to_WiperActuator</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <OPERATIONS>
             <CLIENT-SERVER-OPERATION>
-              <SHORT-NAME>CS_Oper_ECU_to_WiperMotor</SHORT-NAME>
+              <SHORT-NAME>CS_Oper_ECU_to_WiperActuator</SHORT-NAME>
               <ARGUMENTS>
                 <ARGUMENT-DATA-PROTOTYPE>
-                  <SHORT-NAME>wipermotor_speed_value</SHORT-NAME>
+                  <SHORT-NAME>wiper_speed_value</SHORT-NAME>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
                   <DIRECTION>IN</DIRECTION>
                 </ARGUMENT-DATA-PROTOTYPE>
@@ -53,11 +53,11 @@
           </OPERATIONS>
         </CLIENT-SERVER-INTERFACE>
         <CLIENT-SERVER-INTERFACE>
-          <SHORT-NAME>CS_ECU_to_Washer</SHORT-NAME>
+          <SHORT-NAME>CS_ECU_to_WasherActuator</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <OPERATIONS>
             <CLIENT-SERVER-OPERATION>
-              <SHORT-NAME>CS_Oper_ECU_to_Washer</SHORT-NAME>
+              <SHORT-NAME>CS_Oper_ECU_to_WasherActuator</SHORT-NAME>
               <ARGUMENTS>
                 <ARGUMENT-DATA-PROTOTYPE>
                   <SHORT-NAME>washer_value</SHORT-NAME>
@@ -74,11 +74,11 @@
       <SHORT-NAME>SenderReceiverInterfaces</SHORT-NAME>
       <ELEMENTS>
         <SENDER-RECEIVER-INTERFACE>
-          <SHORT-NAME>SR_App_to_Wiper</SHORT-NAME>
+          <SHORT-NAME>SR_WiperController_to_WiperActuator</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE>
-              <SHORT-NAME>wipermotor_Speed_Value</SHORT-NAME>
+              <SHORT-NAME>wiper_speed_value</SHORT-NAME>
               <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
             </VARIABLE-DATA-PROTOTYPE>
           </DATA-ELEMENTS>
@@ -94,7 +94,7 @@
           </DATA-ELEMENTS>
         </SENDER-RECEIVER-INTERFACE>
         <SENDER-RECEIVER-INTERFACE>
-          <SHORT-NAME>SR_Sensor_to_WiperController</SHORT-NAME>
+          <SHORT-NAME>SR_RainSensor_to_WiperController</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <DATA-ELEMENTS>
             <VARIABLE-DATA-PROTOTYPE>
@@ -115,7 +115,7 @@
           <SHORT-NAME>MD_ModeController_to_WiperController</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <MODE-GROUP>
-            <SHORT-NAME>MDGP</SHORT-NAME>
+            <SHORT-NAME>Switch_ModeGroup</SHORT-NAME>
             <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/ModeSwitchInterfaces/ModeDeclarationGroup/ModeDeclarationGroup</TYPE-TREF>
           </MODE-GROUP>
         </MODE-SWITCH-INTERFACE>
@@ -168,11 +168,11 @@
       <SHORT-NAME>TriggerInterfaces</SHORT-NAME>
       <ELEMENTS>
         <TRIGGER-INTERFACE>
-          <SHORT-NAME>TR_Washer</SHORT-NAME>
+          <SHORT-NAME>TR_WiperController_WasherActuator</SHORT-NAME>
           <IS-SERVICE>false</IS-SERVICE>
           <TRIGGERS>
             <TRIGGER>
-              <SHORT-NAME>TR_Washer</SHORT-NAME>
+              <SHORT-NAME>washer_value</SHORT-NAME>
               <TRIGGER-PERIOD />
             </TRIGGER>
           </TRIGGERS>
