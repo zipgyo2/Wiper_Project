@@ -278,6 +278,17 @@
                       </ACCESSED-VARIABLE>
                     </VARIABLE-ACCESS>
                   </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="f0dc86c0-45a7-4d6e-9da0-919c6d3a4e18">
+                      <SHORT-NAME>DSP_wiper_speed_value_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/Pport_WiperController_to_WiperActuator</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator/wiper_speed_value</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                   <SYMBOL>RE_Mode_Auto</SYMBOL>
                   <WRITTEN-LOCAL-VARIABLES>
                     <VARIABLE-ACCESS>
@@ -290,6 +301,17 @@
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="b2662e2e-3146-493d-b81e-254e7cbc6db0">
                   <SHORT-NAME>RE_Mode_Lv1</SHORT-NAME>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="209011c8-7371-4d38-bfca-822b9fd1769a">
+                      <SHORT-NAME>DSP_wiper_speed_value_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/Pport_WiperController_to_WiperActuator</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator/wiper_speed_value</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                   <SYMBOL>RE_Mode_Lv1</SYMBOL>
                   <WRITTEN-LOCAL-VARIABLES>
                     <VARIABLE-ACCESS>
@@ -302,6 +324,17 @@
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="e6485ba8-f8ca-426b-a03d-a07007938c28">
                   <SHORT-NAME>RE_Mode_Lv2</SHORT-NAME>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="45baf9d3-871f-4525-b26a-f7dca25576c4">
+                      <SHORT-NAME>DSP_wiper_speed_value_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/Pport_WiperController_to_WiperActuator</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator/wiper_speed_value</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                   <SYMBOL>RE_Mode_Lv2</SYMBOL>
                   <WRITTEN-LOCAL-VARIABLES>
                     <VARIABLE-ACCESS>
@@ -314,6 +347,17 @@
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="911fb2dc-4229-4e16-ac80-8724947a6d03">
                   <SHORT-NAME>RE_Mode_Lv3</SHORT-NAME>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="2be5f015-bc29-4221-9f86-383d7c796485">
+                      <SHORT-NAME>DSP_wiper_speed_value_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Applications/Wiper_Controller/Pport_WiperController_to_WiperActuator</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SenderReceiverInterfaces/SR_WiperController_to_WiperActuator/wiper_speed_value</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                   <SYMBOL>RE_Mode_Lv3</SYMBOL>
                   <WRITTEN-LOCAL-VARIABLES>
                     <VARIABLE-ACCESS>
